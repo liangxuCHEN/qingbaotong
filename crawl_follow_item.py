@@ -9,9 +9,13 @@ import sql
 import os
 import sys
 
+DB_TMP_TABLE = 'T_Data_AnalyseItemTemp'
+DB_TABLE = 'T_Data_AnalyseItem'
+DB_PROCESS = 'P_Merge_AnalyseItem'
+driver = paramets = log = None
 
-def get_items_value(driver, data_dic, data_list):
-    global paramets
+
+def get_items_value(data_dic, data_list):
     for item_id in data_list:
         url, item_url, item_name, category, shop_name = data_dic[item_id]
         paramets['current_url'] = url
@@ -32,7 +36,6 @@ def get_items_value(driver, data_dic, data_list):
             category.replace('\'', ''),
         )
         # output item struct to sql
-
         res = sql.is_exist_item_value(item_struct, settings.follow_item_start_date)
 
         if res:
@@ -74,14 +77,13 @@ def get_items_value(driver, data_dic, data_list):
                     i = 0
                     tmp_item = []
             # the last one is the sum result
-            sql.analyse_item_to_sql(tmp_data[:-1])
+            sql.analyse_item_to_sql(tmp_data[:-1], DB_TMP_TABLE)
 
         # 完成一个宝贝，加一
         paramets['index_item'] += 1
 
 
-def get_items_urls_value(driver):
-    global paramets
+def get_items_urls_value():
     while driver.execute_script("return document.readyState") != 'complete':
         time.sleep(3)
         # print 'wait load'
@@ -136,9 +138,8 @@ def get_items_urls_value(driver):
     return {'dic': items_data_dic, 'list': items_list}
 
 
-def get_group_value(driver, url):
+def get_group_value(url):
     # 取得一组宝贝里面的所有宝贝链接
-    global paramets
     driver.get(url)
     time.sleep(2)
     res_dic = {}
@@ -146,7 +147,7 @@ def get_group_value(driver, url):
     # 多页内容
     pages = driver.find_elements_by_class_name('page')
     if pages is not None:
-        res = get_items_urls_value(driver)
+        res = get_items_urls_value()
         res_dic.update(res['dic'])
         res_list += res['list']
         for i_page in range(1, len(pages)):
@@ -155,11 +156,11 @@ def get_group_value(driver, url):
                           "].getElementsByTagName('a')[0].click()"
             driver.execute_script(scrpit_text)
             time.sleep(2)
-            res = get_items_urls_value(driver)
+            res = get_items_urls_value()
             res_dic.update(res['dic'])
             res_list += res['list']
     else:
-        return get_items_urls_value(driver)
+        return get_items_urls_value()
 
     return {'dic': res_dic, 'list': res_list}
 
@@ -168,18 +169,18 @@ def restart_program(error):
     """Restarts the current program.
     Note: this function does not return. Any cleanup action (like
     saving data) must be done before calling this function."""
-    global paramets
     file_out = open('follow_item_process.log', 'a')
-    file_out.write('current_url:%s;index_item:%d;index_shop:%d\n' %
-                   (paramets['current_url'], paramets['index_item'], paramets['index_shop']))
+    file_out.write('current_url:%s;index_item:%d;index_group:%d \n' %
+                   (paramets['current_url'], paramets['index_item'], paramets['index_group']))
     file_out.close()
     log.error(error)
     driver.quit()
+    sql.exec_db_merge_function(DB_PROCESS)
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
 
-def get_urls_value(driver):
+def get_urls_value():
     global paramets
     while driver.execute_script("return document.readyState") != 'complete':
         time.sleep(3)
@@ -198,7 +199,7 @@ def get_urls_value(driver):
     return items_list
 
 
-def get_all_urls(driver):
+def get_all_urls():
     # 取得所有宝贝分组
     driver.get('http://www.qbtchina.com/item')
     time.sleep(2)
@@ -206,27 +207,27 @@ def get_all_urls(driver):
     # 多页内容
     pages = driver.find_elements_by_class_name('page')
     if pages is not None:
-        res_list += get_urls_value(driver)
+        res_list += get_urls_value()
         for i_page in range(1, len(pages)):
             # 进入下一页
             scrpit_text = "document.getElementsByClassName('page')[" + str(i_page) + \
                           "].getElementsByTagName('a')[0].click()"
             driver.execute_script(scrpit_text)
             time.sleep(2)
-            res_list += get_urls_value(driver)
+            res_list += get_urls_value()
     else:
-        return get_urls_value(driver)
+        return get_urls_value()
 
     return res_list
 
 
 if __name__ == '__main__':
-
     driver = tool.init()
     try:
+        sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
         tool.login(driver, settings.LOGIN_NAME, settings.PASSWORD)
     except Exception, e:
-        time.sleep(20)
+        time.sleep(1800)
         restart_program(e)
 
     paramets = tool.get_current_point('follow_item_process.log')
@@ -236,18 +237,20 @@ if __name__ == '__main__':
               (paramets['current_url'], paramets['index_item'], paramets['index_group']))
 
     # 获取全部分组url
-    all_urls = get_all_urls(driver)
+    all_urls = get_all_urls()
 
     for url in all_urls[paramets['index_group']:]:
         log.error('---Step to : ' + paramets['current_url'] + '------')
         try:
-            res = get_group_value(driver, url)
+            res = get_group_value(url)
             time.sleep(3)
-            get_items_value(driver, res['dic'], res['list'][paramets['index_item']:])
+            get_items_value(res['dic'], res['list'][paramets['index_item']:])
         except Exception, e:
             restart_program(e)
         # new category, index should be return first one
         paramets['index_item'] = 0
         paramets['index_group'] += 1
 
+    # 把临时表数据合并到实际数据表
+    sql.exec_db_merge_function(DB_PROCESS)
     # print('Well done, it is the END !')

@@ -14,16 +14,19 @@ import sys
 并且开启 sql.is_exist_item_struct(item_struct) 这个函数，
 follow_shop_log 记录爬虫的进度
 """
+DB_TMP_TABLE = 'T_Data_AnalyseItemTemp'
+DB_TABLE = 'T_Data_AnalyseItem'
+DB_PROCESS_ITEM = 'P_Merge_AnalyseItem'
+DB_PROCESS_ITEMSTRUCT = 'P_Merge_ItemStruct'
+driver = paramets = log = None
 
 
-def get_items_value(driver, data_dic, data_list):
-    global paramets
+def get_items_value(data_dic, data_list):
     for item_id in data_list:
         url, item_url, item_name, category = data_dic[item_id]
         paramets['current_url'] = url
         log.error('current_url:%s;index_item:%d;index_shop:%d' %
                   (paramets['current_url'], paramets['index_item'], paramets['index_shop']))
-        """
         item_struct = (
             paramets['sid'],
             paramets['shop_name'].replace('\'', ''),
@@ -32,10 +35,9 @@ def get_items_value(driver, data_dic, data_list):
             item_name.replace('\'', ''),
             category.replace('\'', ''),
         )
-        output item struct to sql
-        查看是否有新店铺，有新店铺关注再开启
+        # output item struct to sql
         sql.add_item_struct(item_struct)
-        """
+
         driver.get(url)
         time.sleep(2)
         # print settings.follow_shop_start_date
@@ -68,14 +70,13 @@ def get_items_value(driver, data_dic, data_list):
                 i = 0
                 tmp_item = []
         # the last one is the sum result
-        sql.analyse_item_to_sql(tmp_data[:-1])
+        sql.analyse_item_to_sql(tmp_data[:-1], DB_TMP_TABLE)
 
         # 完成一个宝贝，加一
         paramets['index_item'] += 1
 
 
-def get_items_urls_value(driver):
-    global paramets
+def get_items_urls_value():
     table = driver.find_element_by_class_name('text-center')
     while driver.execute_script("return document.readyState") != 'complete':
         time.sleep(3)
@@ -122,8 +123,7 @@ def get_items_urls_value(driver):
     return {'dic': items_data_dic, 'list': items_list}
 
 
-def get_shop_value(driver, url):
-    global paramets
+def get_shop_value(url):
     driver.get(url)
     time.sleep(2)
     current_url = driver.current_url
@@ -141,7 +141,7 @@ def get_shop_value(driver, url):
     # 多页内容
     pages = driver.find_elements_by_class_name('page')
     if pages is not None:
-        res = get_items_urls_value(driver)
+        res = get_items_urls_value()
         res_dic.update(res['dic'])
         res_list += res['list']
         for i_page in range(1, len(pages)):
@@ -150,11 +150,11 @@ def get_shop_value(driver, url):
                           "].getElementsByTagName('a')[0].click()"
             driver.execute_script(scrpit_text)
             time.sleep(2)
-            res = get_items_urls_value(driver)
+            res = get_items_urls_value()
             res_dic.update(res['dic'])
             res_list += res['list']
     else:
-        return get_items_urls_value(driver)
+        return get_items_urls_value()
 
     return {'dic': res_dic, 'list': res_list}
 
@@ -163,24 +163,25 @@ def restart_program(error):
     """Restarts the current program.
     Note: this function does not return. Any cleanup action (like
     saving data) must be done before calling this function."""
-    global paramets
     file_out = open('follow_shop_process.log', 'a')
-    file_out.write('current_url:%s;index_item:%d;index_shop:%d\n' %
+    file_out.write('current_url:%s;index_item:%d;index_shop:%d \n' %
                    (paramets['current_url'], paramets['index_item'], paramets['index_shop']))
     file_out.close()
     log.error(error)
     driver.quit()
+    sql.exec_db_merge_function(DB_PROCESS_ITEM)
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
 if __name__ == '__main__':
-
     driver = tool.init()
     try:
+        sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
         tool.login(driver, settings.LOGIN_NAME, settings.PASSWORD)
     except Exception, e:
         time.sleep(20)
         restart_program(e)
+
     paramets = tool.get_current_point('follow_shop_process.log')
     log = log_sys.log_init('follow_shop')
     time.sleep(2)
@@ -190,11 +191,15 @@ if __name__ == '__main__':
     for shop_url in settings.follow_shop_urls[paramets['index_shop']:]:
         log.error('---Step to : ' + paramets['current_url'] + '------')
         try:
-            res = get_shop_value(driver, 'http://www.qbtchina.com' + shop_url)
+            res = get_shop_value('http://www.qbtchina.com' + shop_url)
             time.sleep(3)
-            get_items_value(driver, res['dic'], res['list'][paramets['index_item']:])
+            get_items_value(res['dic'], res['list'][paramets['index_item']:])
         except Exception, e:
             restart_program(e)
         # new category, index should be return first one
         paramets['index_item'] = 0
         paramets['index_shop'] += 1
+
+    # 把临时表数据合并到实际数据表
+    sql.exec_db_merge_function(DB_PROCESS_ITEM)
+    sql.exec_db_merge_function(DB_PROCESS_ITEMSTRUCT)

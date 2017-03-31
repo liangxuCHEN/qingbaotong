@@ -120,28 +120,22 @@ def logo_item_to_sql(data):
     conn.exec_many_query(insert_sql, data)
 
 
-def analyse_item_to_sql(data):
+def analyse_item_to_sql(data, table_name):
     conn = Mssql()
-    sql_text = "insert into T_Data_AnalyseItem values (%s,%s,%d,%d,%d,%s)"
+    sql_text = "insert into " + table_name + " values (%s,%s,%d,%d,%d,%s)"
     conn.exec_many_query(sql_text, data)
 
 
 def add_item_struct(data):
     conn = Mssql()
-    sql_text = "select sid from T_Data_ItemStruct where sid='%s' and itemId='%s'" % \
-               (data[0].encode('utf8'), data[2].encode('utf8'))
-    res = conn.exec_query(sql_text)
-    if len(res) > 0:
-        return
-    else:
-        sql_text = "insert into T_Data_ItemStruct values ('%s','%s','%s','%s','%s','%s')" % \
-                   (data[0].encode('utf8'),
-                    data[1].encode('utf8'),
-                    data[2].encode('utf8'),
-                    data[3].encode('utf8'),
-                    data[4].encode('utf8'),
-                    data[5].encode('utf8'))
-        conn.exec_non_query(sql_text)
+    sql_text = "insert into T_Data_ItemStructTemp values ('%s','%s','%s','%s','%s','%s')" % \
+               (data[0].encode('utf8'),
+                data[1].encode('utf8'),
+                data[2].encode('utf8'),
+                data[3].encode('utf8'),
+                data[4].encode('utf8'),
+                data[5].encode('utf8'))
+    conn.exec_non_query(sql_text)
 
 
 def is_exist_item_value(data, date_begin):
@@ -152,8 +146,7 @@ def is_exist_item_value(data, date_begin):
     if len(res) > 0:
         return True
     else:
-        # 关注有更新再启动
-        # add_item_struct(data)
+        add_item_struct(data)
         return False
 
 

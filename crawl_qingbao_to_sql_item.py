@@ -123,11 +123,11 @@ def get_hot_sale_data(url, type_data='item', date_chose=None):
         # firstly, the date from tmall
         driver.find_element_by_xpath("//*[@name='is_mall'][@value='1']").click()
         paramets['record_type'] = 1
-        get_top_sale_table_value(driver, categoryid, record_type=1, date_chose=date_chose)
+        get_top_sale_table_value(categoryid, record_type=1, date_chose=date_chose)
         # secondly, the date from taobao
         driver.find_element_by_xpath("//*[@name='is_mall'][@value='0']").click()
         paramets['record_type'] = 0
-        get_top_sale_table_value(driver, categoryid, record_type=0, date_chose=date_chose)
+        get_top_sale_table_value(categoryid, record_type=0, date_chose=date_chose)
 
     paramets['record_type'] = 1
 
@@ -185,20 +185,22 @@ def main_process():
         log.error('---Step to : ' + paramets['current_url'] + '------')
         try:
             get_second_data(item['url'])
-            sql.exec_db_merge_function(DB_PROCESS)
         except:
             time.sleep(2)
             restart_program()
 
 if __name__ == "__main__":
+    sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
+    driver = init()
+
     try:
-        sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
-        driver = init()
         login(driver, settings.LOGIN_NAME, settings.PASSWORD)
-        paramets = get_current_point('hot_item_process.log')
-        log = log_sys.log_init('hot_item')
     except:
         time.sleep(1800)
         restart_program()
 
+    paramets = get_current_point('hot_item_process.log')
+    log = log_sys.log_init('hot_item')
     main_process()
+    # 把临时表数据合并到实际数据表
+    sql.exec_db_merge_function(DB_PROCESS)

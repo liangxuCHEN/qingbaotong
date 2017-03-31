@@ -169,6 +169,7 @@ def restart_program():
                     paramets['begin_index'], paramets['begin_category']))
     file_out.close()
     sql.exec_db_merge_function(DB_PROCESS)
+    driver.quit()
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
@@ -183,21 +184,21 @@ def main_process():
         log.error('---Step to : ' + paramets['current_url'] + '------')
         try:
             get_second_data(item['url'])
-            sql.exec_db_merge_function(DB_PROCESS)
         except:
             time.sleep(2)
             restart_program()
 
 if __name__ == "__main__":
+    sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
+    driver = init()
     try:
-        sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
-        driver = init()
         login(driver, settings.LOGIN_NAME, settings.PASSWORD)
-        paramets = get_current_point('hot_shop_process.log')
-        log = log_sys.log_init('hot_shop')
     except:
         time.sleep(1800)
         restart_program()
 
+    paramets = get_current_point('hot_shop_process.log')
+    log = log_sys.log_init('hot_shop')
     main_process()
-    # print ("THE END!")
+    # 把临时表数据合并到实际数据表
+    sql.exec_db_merge_function(DB_PROCESS)
