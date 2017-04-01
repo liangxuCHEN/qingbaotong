@@ -176,10 +176,10 @@ def restart_program(error):
 if __name__ == '__main__':
     driver = tool.init()
     try:
-        sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
         tool.login(driver, settings.LOGIN_NAME, settings.PASSWORD)
+        sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
     except Exception, e:
-        time.sleep(20)
+        time.sleep(1800)
         restart_program(e)
 
     paramets = tool.get_current_point('follow_shop_process.log')

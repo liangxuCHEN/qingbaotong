@@ -1,0 +1,2 @@
+for i in range(0,151):
+    print("https://portal-jia.tmall.com/msf/verificationOrderExport.do?shipTimeFrom=2017-01-01&shipTimeEnd=2017-04-01&identifyStatus=0&orderId=&buyerNick=&tpName=&currentPage=%d" % (i*10))

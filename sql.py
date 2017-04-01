@@ -114,9 +114,9 @@ def update_hot_shop_plan(data):
     conn.exec_non_query(update_sql)
 
 
-def logo_item_to_sql(data):
+def logo_item_to_sql(data, table_name):
     conn = Mssql()
-    insert_sql = "insert into T_Data_Logo values (%s,%s,%s,%s,%d,%s,%s,%d,%s,%s,%s,%d)"
+    insert_sql = "insert into " + table_name + " values (%s,%s,%s,%s,%d,%s,%s,%d,%s,%s,%s,%d)"
     conn.exec_many_query(insert_sql, data)
 
 

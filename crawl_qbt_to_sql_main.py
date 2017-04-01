@@ -10,6 +10,11 @@ import settings
 import sql
 import time
 
+DB_TMP_TABLE = 'T_Data_LogoTemp'
+DB_TABLE = 'T_Data_Logo'
+DB_PROCESS = 'P_Merge_Logo'
+paramets = log = None
+
 
 def init():
     os.environ['webdriver.gecko.driver'] = "D:\geckodriver.exe"
@@ -33,7 +38,6 @@ def login(driver, username, password):
 
 
 def get_table_value(driver):
-    global paramets
     driver.find_element_by_id('submit-button').click()
     # get date from table, if it can not get the table
     # mostly it is the html load delay, just try again!
@@ -76,14 +80,13 @@ def get_table_value(driver):
             count = 0
 
     try:
-        sql.logo_item_to_sql(tmp_data)
+        sql.logo_item_to_sql(tmp_data, DB_TMP_TABLE)
     except:
         log.error('Error : output to SQL ')
         # print tmp_data
 
 
 def chose_date(driver):
-    global paramets
     time.sleep(3)
     for date_select in settings.date_chose_main[paramets['date_index']:]:
         log.error('current_url:%s;record_type:%d;date_index:%d;begin_index:%d;begin_sub_index:%d;begin_category:%d' %
@@ -106,7 +109,6 @@ def chose_date(driver):
 
 
 def get_data(driver, url):
-    global paramets
     driver.get(url)
     time.sleep(2)
     while driver.execute_script("return document.readyState") != 'complete':
@@ -230,12 +232,12 @@ def restart_program(driver, error=None):
     file_out.close()
     driver.quit()
     log.error(error)
+    sql.exec_db_merge_function(DB_PROCESS)
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
 
 def main_process(driver):
-    global paramets
     res = re.findall('cid=[0-9].*&', paramets['current_url'])
     paramets['category_id'] = res[0][4:-1]
 
@@ -256,6 +258,7 @@ if __name__ == "__main__":
     driver = init()
     try:
         login(driver, settings.LOGIN_NAME, settings.PASSWORD)
+        sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
     except Exception, e:
         time.sleep(1800)
         restart_program(driver, error=e)
@@ -267,4 +270,7 @@ if __name__ == "__main__":
     time.sleep(2)
     paramets['is_first_time'] = True
     main_process(driver)
+    # 把临时表数据合并到实际数据表
+    sql.exec_db_merge_function(DB_PROCESS)
+
 
