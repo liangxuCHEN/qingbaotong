@@ -5,7 +5,6 @@ import sys
 import re
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-# from selenium.webdriver.support.ui import WebDriverWait
 import settings
 import sql
 import time
@@ -14,12 +13,13 @@ DB_TMP_TABLE = 'T_Data_LogoTemp'
 DB_TABLE = 'T_Data_Logo'
 DB_PROCESS = 'P_Merge_Logo'
 paramets = log = None
-
+engine = table_schema = None
+tmp_insert_data = []
 
 def init():
-    os.environ['webdriver.gecko.driver'] = "D:\geckodriver.exe"
+    #os.environ['webdriver.gecko.driver'] = r"D:\geckodriver.exe"
     profile_dir = r'C:\Users\Administrator\AppData\Roaming\Mozilla\Firefox\Profiles\70usgfgt.selenium'
-    driver = webdriver.Firefox(profile_dir)
+    driver = webdriver.Firefox(profile_dir, executable_path=r'D:\geckodriver\geckodriver.exe')
     time.sleep(2)
     return driver
 
@@ -38,6 +38,7 @@ def login(driver, username, password):
 
 
 def get_table_value(driver):
+    global tmp_insert_data
     driver.find_element_by_id('submit-button').click()
     # get date from table, if it can not get the table
     # mostly it is the html load delay, just try again!
@@ -55,35 +56,31 @@ def get_table_value(driver):
     count = 0
     tbody = table.find_elements_by_tag_name('td')
     tmp_item = []
-    tmp_data = []
+
     num_column = settings.MAIN_TABLE_NUM_COLUMNS
 
     for cell in tbody:
         tmp_item.append(cell.text)
         count += 1
         if count == num_column:
-            tmp_data.append((
-                paramets['category_id'].encode('utf8'),
-                paramets['pos_id'],
-                paramets['pos_name'],
-                tmp_item[0].replace('\'', ''),
-                int(tmp_item[1].replace(',', '')),
-                tmp_item[2].encode('utf8'),
-                tmp_item[3].encode('utf8'),
-                float(tmp_item[4].replace(',', '')),
-                tmp_item[5].replace(',', '').encode('utf8'),
-                tmp_item[6].replace(',', '').encode('utf8'),
-                (paramets['date'] + '01').encode('utf8'),
-                int(paramets['record_type']),
-            ))
+            tmp_insert_data.append({
+                'CategoryId': paramets['category_id'],
+                'PosId': paramets['pos_id'],
+                'PosName': paramets['pos_name'],
+                'LogoName': tmp_item[0].replace('\'', ''),
+                'SalesCnt': int(tmp_item[1].replace(',', '')),
+                'SalesCntTop20Percent': tmp_item[2].encode('utf8'),
+                'SalesCntPercent': tmp_item[3].encode('utf8'),
+                'SalesMoney': float(tmp_item[4].replace(',', '')),
+                'SalesMoneyTop20Percent': tmp_item[5].replace(',', '').encode('utf8'),
+                'SalesMoneyPercent': tmp_item[6].replace(',', '').encode('utf8'),
+                'RecordDate': (paramets['date'] + '01').encode('utf8'),
+                'RecordType': int(paramets['record_type']),
+            })
             tmp_item = []
             count = 0
 
-    try:
-        sql.logo_item_to_sql(tmp_data, DB_TMP_TABLE)
-    except:
-        log.error('Error : output to SQL ')
-        # print tmp_data
+    output_data_to_db()
 
 
 def chose_date(driver):
@@ -220,19 +217,32 @@ def get_current_point(filename):
         return begin_param
 
 
+def output_data_to_db(is_all=False):
+    global tmp_insert_data
+    if len(tmp_insert_data) > 1000 or is_all:
+        try:
+            sql.output_data_sql(tmp_insert_data, engine, table_schema)
+            log.error('Success : output to DB')
+        except:
+            log.error('Error : output to DB ')
+        finally:
+            tmp_insert_data = []
+
+
 def restart_program(driver, error=None):
     """Restarts the current program.
     Note: this function does not return. Any cleanup action (like
     saving data) must be done before calling this function."""
-    global paramets
+    global tmp_insert_data
     file_out = open('main_process.log', 'a')
     file_out.write('current_url:%s;record_type:%d;date_index:%d;begin_index:%d;begin_sub_index:%d;begin_category:%d\n' %
                    (paramets['current_url'], paramets['record_type'], paramets['date_index'],
                     paramets['begin_index'], paramets['begin_sub_index'], paramets['begin_category']))
     file_out.close()
-    driver.quit()
     log.error(error)
+    output_data_to_db(is_all=True)
     sql.exec_db_merge_function(DB_PROCESS)
+    driver.quit()
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
@@ -256,6 +266,7 @@ def main_process(driver):
 
 if __name__ == "__main__":
     driver = init()
+    table_schema, engine = sql.init_connection(DB_TMP_TABLE)
     try:
         login(driver, settings.LOGIN_NAME, settings.PASSWORD)
         sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
@@ -271,6 +282,7 @@ if __name__ == "__main__":
     paramets['is_first_time'] = True
     main_process(driver)
     # 把临时表数据合并到实际数据表
+    output_data_to_db(is_all=True)
     sql.exec_db_merge_function(DB_PROCESS)
 
 

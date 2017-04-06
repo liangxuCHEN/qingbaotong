@@ -1,6 +1,42 @@
 # -*- coding: utf-8 -*-
 import pymssql
 import settings
+import sqlalchemy
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+
+def init_connection(table_name):
+    engine = create_engine('mssql+pymssql://%s:%s@%s/%s' % (
+        settings.HOST_253_USER,
+        settings.HOST_PASSWORD,
+        settings.HOST_253,
+        settings.DB
+    ))
+    # connection = engine.connect()
+    metadata = sqlalchemy.schema.MetaData(bind=engine, reflect=True)
+    table_schema = sqlalchemy.Table(table_name, metadata, autoload=True)
+
+    return table_schema, engine
+
+
+def output_data_sql(list_write, engine, table_schema):
+
+    connection = engine.connect()
+    # Open the session
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    # Inser the dataframe into the database in one bulk
+    # print(table_schema.insert())
+    try:
+        connection.execute(table_schema.insert(), list_write)
+        session.commit()
+    except Exception as e:
+        print e
+    finally:
+        session.close()
+        connection.close()
 
 
 """
