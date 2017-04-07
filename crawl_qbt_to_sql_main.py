@@ -9,7 +9,7 @@ import settings
 import sql
 import time
 
-DB_TMP_TABLE = 'T_Data_LogoTemp'
+DB_TMP_TABLE = 'T_Data_Logo'
 DB_TABLE = 'T_Data_Logo'
 DB_PROCESS = 'P_Merge_Logo'
 paramets = log = None
@@ -241,7 +241,7 @@ def restart_program(driver, error=None):
     file_out.close()
     log.error(error)
     output_data_to_db(is_all=True)
-    sql.exec_db_merge_function(DB_PROCESS)
+    # sql.exec_db_merge_function(DB_PROCESS)
     driver.quit()
     python = sys.executable
     os.execl(python, python, *sys.argv)
@@ -269,7 +269,7 @@ if __name__ == "__main__":
     table_schema, engine = sql.init_connection(DB_TMP_TABLE)
     try:
         login(driver, settings.LOGIN_NAME, settings.PASSWORD)
-        sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
+        # sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
     except Exception, e:
         time.sleep(1800)
         restart_program(driver, error=e)
@@ -281,8 +281,8 @@ if __name__ == "__main__":
     time.sleep(2)
     paramets['is_first_time'] = True
     main_process(driver)
-    # 把临时表数据合并到实际数据表
     output_data_to_db(is_all=True)
-    sql.exec_db_merge_function(DB_PROCESS)
+    # 把临时表数据合并到实际数据表
+    #sql.exec_db_merge_function(DB_PROCESS)
 
 

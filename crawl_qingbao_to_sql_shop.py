@@ -19,6 +19,8 @@ DB_TMP_TABLE = 'T_Data_HotShopTemp'
 DB_TABLE = 'T_Data_HotShop'
 DB_PROCESS = 'P_Merge_HotShop'
 driver = paramets = log = None
+tmp_insert_data = []
+engine = table_schema = None
 
 
 def get_top_shop_table_value(categoryid, record_type, date_chose=None):
@@ -53,7 +55,6 @@ def get_top_shop_table_value(categoryid, record_type, date_chose=None):
         count = 0
         tbody = table.find_elements_by_tag_name('td')
         tmp_item = []
-        tmp_data = []
         num_column = settings.HOT_SHOP_NUM_COLUMNS
         for cell in tbody:
             # column 1,2,7 have tag a or img, so they are different way to collect
@@ -66,26 +67,23 @@ def get_top_shop_table_value(categoryid, record_type, date_chose=None):
 
             count += 1
             if count == num_column:
-                tmp_data.append((
-                    categoryid,
-                    int(tmp_item[0]),
-                    tmp_item[2],
-                    tmp_item[1].replace('\'', '').encode('utf8'),
-                    int(tmp_item[3].replace(',', '')),
-                    int(tmp_item[4].replace(',', '')),
-                    tmp_item[5],
-                    (date_select+"01"),
-                    record_type
-                ))
+                tmp_insert_data.append({
+                    'CategoryId': categoryid,
+                    'HotRange': int(tmp_item[0]),
+                    'ShopName': tmp_item[2],
+                    'ShopURL': tmp_item[1].replace('\'', '').encode('utf8'),
+                    'SalesCnt': int(tmp_item[3].replace(',', '')),
+                    'SalesMoney': int(tmp_item[4].replace(',', '')),
+                    'city': tmp_item[5],
+                    'RecordDate': (date_select+"01"),
+                    'RecordType': record_type
+                })
 
                 tmp_item = []
                 count = 0
 
         # output to DB
-        try:
-            sql.hot_shop_to_sql(tmp_data, DB_TMP_TABLE)
-        except:
-            log.error('Error : output to SQL ')
+        output_data_to_db()
 
         paramets['date_index'] += 1
 
@@ -159,7 +157,19 @@ def get_second_data(url):
     paramets['begin_category'] += 1
 
 
-def restart_program():
+def output_data_to_db(is_all=False):
+    global tmp_insert_data
+    if len(tmp_insert_data) > 2000 or is_all:
+        try:
+            sql.output_data_sql(tmp_insert_data, engine, table_schema)
+            log.error('Success : output to DB')
+        except:
+            log.error('Error : output to DB  and length of row is %d' % len(tmp_insert_data))
+        finally:
+            tmp_insert_data = []
+
+
+def restart_program(error=None):
     """Restarts the current program.
     Note: this function does not return. Any cleanup action (like
     saving data) must be done before calling this function."""
@@ -168,7 +178,9 @@ def restart_program():
                    (paramets['current_url'], paramets['record_type'], paramets['date_index'],
                     paramets['begin_index'], paramets['begin_category']))
     file_out.close()
-    sql.exec_db_merge_function(DB_PROCESS)
+    log.error(error)
+    output_data_to_db(is_all=True)
+    # sql.exec_db_merge_function(DB_PROCESS)
     driver.quit()
     python = sys.executable
     os.execl(python, python, *sys.argv)
@@ -184,21 +196,24 @@ def main_process():
         log.error('---Step to : ' + paramets['current_url'] + '------')
         try:
             get_second_data(item['url'])
-        except:
+        except Exception as e:
             time.sleep(2)
-            restart_program()
+            restart_program(error=e)
 
 if __name__ == "__main__":
-    sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
+    table_schema, engine = sql.init_connection(DB_TMP_TABLE)
+    # sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
     driver = init()
     try:
         login(driver, settings.LOGIN_NAME, settings.PASSWORD)
-    except:
+    except Exception as e:
         time.sleep(1800)
-        restart_program()
+        restart_program(error=e)
 
     paramets = get_current_point('hot_shop_process.log')
     log = log_sys.log_init('hot_shop')
     main_process()
+    output_data_to_db(is_all=True)
+
     # 把临时表数据合并到实际数据表
-    sql.exec_db_merge_function(DB_PROCESS)
+    # sql.exec_db_merge_function(DB_PROCESS)

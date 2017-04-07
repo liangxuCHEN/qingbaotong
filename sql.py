@@ -182,7 +182,7 @@ def is_exist_item_value(data, date_begin):
     if len(res) > 0:
         return True
     else:
-        add_item_struct(data)
+        #add_item_struct(data)
         return False
 
 

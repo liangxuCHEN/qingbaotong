@@ -13,6 +13,8 @@ DB_TMP_TABLE = 'T_Data_AnalyseItemTemp'
 DB_TABLE = 'T_Data_AnalyseItem'
 DB_PROCESS = 'P_Merge_AnalyseItem'
 driver = paramets = log = None
+tmp_insert_data = []
+engine = table_schema = None
 
 
 def get_items_value(data_dic, data_list):
@@ -60,24 +62,26 @@ def get_items_value(data_dic, data_list):
             td_data = table.find_elements_by_tag_name('td')
 
             tmp_item = []
-            tmp_data = []
             i = 0
             for cell in td_data:
                 tmp_item.append(cell.text)
                 i += 1
                 if i == settings.follow_shop_num:
-                    tmp_data.append((
-                        sid.encode('utf8'),
-                        item_id.encode('utf8'),
-                        float(tmp_item[3].replace(',', '')) if tmp_item[3] != '' else 0,
-                        float(tmp_item[1].replace(',', '')) if tmp_item[1] != '' else 0,
-                        float(tmp_item[2].replace(',', '')) if tmp_item[2] != '' else 0,
-                        tmp_item[0].encode('utf8')
-                    ))
+                    tmp_insert_data.append({
+                        'sid': sid.encode('utf8'),
+                        'itemId': item_id.encode('utf8'),
+                        'salesCnt': float(tmp_item[3].replace(',', '')) if tmp_item[3] != '' else 0,
+                        'originalPrice': float(tmp_item[1].replace(',', '')) if tmp_item[1] != '' else 0,
+                        'finalPrice': float(tmp_item[2].replace(',', '')) if tmp_item[2] != '' else 0,
+                        'recordDate': tmp_item[0].encode('utf8')
+                    })
                     i = 0
                     tmp_item = []
             # the last one is the sum result
-            sql.analyse_item_to_sql(tmp_data[:-1], DB_TMP_TABLE)
+            tmp_insert_data.pop()
+            output_data_to_db()
+            #sql.analyse_item_to_sql(tmp_data[:-1], DB_TMP_TABLE)
+
 
         # 完成一个宝贝，加一
         paramets['index_item'] += 1
@@ -165,6 +169,18 @@ def get_group_value(url):
     return {'dic': res_dic, 'list': res_list}
 
 
+def output_data_to_db(is_all=False):
+    global tmp_insert_data
+    if len(tmp_insert_data) > 2000 or is_all:
+        try:
+            sql.output_data_sql(tmp_insert_data, engine, table_schema)
+            log.error('Success : output to DB')
+        except:
+            log.error('Error : output to DB  and length of row is %d' % len(tmp_insert_data))
+        finally:
+            tmp_insert_data = []
+
+
 def restart_program(error):
     """Restarts the current program.
     Note: this function does not return. Any cleanup action (like
@@ -174,14 +190,14 @@ def restart_program(error):
                    (paramets['current_url'], paramets['index_item'], paramets['index_group']))
     file_out.close()
     log.error(error)
+    output_data_to_db(is_all=True)
     driver.quit()
-    sql.exec_db_merge_function(DB_PROCESS)
+    # sql.exec_db_merge_function(DB_PROCESS)
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
 
 def get_urls_value():
-    global paramets
     while driver.execute_script("return document.readyState") != 'complete':
         time.sleep(3)
     table = driver.find_element_by_class_name('search_result_table')
@@ -222,9 +238,10 @@ def get_all_urls():
 
 
 if __name__ == '__main__':
+    table_schema, engine = sql.init_connection(DB_TMP_TABLE)
     driver = tool.init()
     try:
-        sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
+        # sql.init_temp_table(DB_TMP_TABLE, DB_TABLE)
         tool.login(driver, settings.LOGIN_NAME, settings.PASSWORD)
     except Exception, e:
         time.sleep(1800)
@@ -251,6 +268,7 @@ if __name__ == '__main__':
         paramets['index_item'] = 0
         paramets['index_group'] += 1
 
+    output_data_to_db(is_all=True)
     # 把临时表数据合并到实际数据表
-    sql.exec_db_merge_function(DB_PROCESS)
+    # sql.exec_db_merge_function(DB_PROCESS)
     # print('Well done, it is the END !')

@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ff8d94e6-7e6e-4bcd-a9df-07d79f229185" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl_follow_item.py" afterPath="$PROJECT_DIR$/crawl_follow_item.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl_follow_shop.py" afterPath="$PROJECT_DIR$/crawl_follow_shop.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl_qbt_to_sql_main.py" afterPath="$PROJECT_DIR$/crawl_qbt_to_sql_main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" afterPath="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py" afterPath="$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/follow_item_process.log" afterPath="$PROJECT_DIR$/follow_item_process.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/follow_shop_process.log" afterPath="$PROJECT_DIR$/follow_shop_process.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot_item_process.log" afterPath="$PROJECT_DIR$/hot_item_process.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot_shop_process.log" afterPath="$PROJECT_DIR$/hot_shop_process.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_process.log" afterPath="$PROJECT_DIR$/main_process.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql.py" afterPath="$PROJECT_DIR$/sql.py" />
     </list>
@@ -21,38 +29,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="crawl_qbt_to_sql_main.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="262" column="39" lean-forward="true" selection-start-line="262" selection-start-column="39" selection-end-line="262" selection-end-column="39" />
-              <folding>
-                <element signature="e#24#38#0" expanded="true" />
-                <element signature="e#719#1104#0" expanded="false" />
-                <element signature="e#1140#2801#0" expanded="false" />
-                <element signature="e#3779#5078#0" expanded="false" />
-                <element signature="e#5121#7197#0" expanded="false" />
-                <element signature="e#7237#7786#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main1491458204.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main1491458204.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="sql.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="289">
+              <caret line="184" column="9" lean-forward="false" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
                 <element signature="e#1116#3139#0" expanded="false" />
@@ -62,20 +43,19 @@
                 <element signature="e#4062#4363#0" expanded="false" />
                 <element signature="e#4612#4742#0" expanded="false" />
                 <element signature="e#4776#5158#0" expanded="false" />
-                <element signature="e#5208#5524#0" expanded="false" />
-                <element signature="e#5575#5785#0" expanded="false" />
-                <element signature="e#5831#5912#0" expanded="false" />
-                <element signature="e#5946#7274#0" expanded="false" />
+                <element signature="e#5576#5786#0" expanded="false" />
+                <element signature="e#5832#5913#0" expanded="false" />
+                <element signature="e#5947#7275#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_process.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_process.log">
+      <file leaf-file-name="follow_shop1491537096.log" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/follow_shop1491537096.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="84" lean-forward="false" selection-start-line="1" selection-start-column="84" selection-end-line="1" selection-end-column="84" />
+            <state relative-caret-position="152">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,7 +91,6 @@
       <find>get_items_value</find>
       <find>get_items_urls_value</find>
       <find>get_shop_value</find>
-      <find>add_item_struct</find>
       <find>is_exist_item_value</find>
       <find>logo_item_to_sql</find>
       <find>init</find>
@@ -121,9 +100,15 @@
       <find>BeautifulSoup</find>
       <find>beau</find>
       <find>DB_PROCESS</find>
-      <find>table_schema</find>
+      <find>engine</find>
+      <find>exec_db_merge_function</find>
+      <find>restart_program</find>
       <find>output_data_to_db</find>
+      <find>paramets</find>
+      <find>DB_TMP_TABLE</find>
+      <find>table_schema</find>
       <find>tmp_insert_data</find>
+      <find>add_item_struct</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,28 +117,33 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/follow_item_process.log" />
         <option value="$PROJECT_DIR$/follow_shop_process.log" />
-        <option value="$PROJECT_DIR$/crawl_follow_item.py" />
-        <option value="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" />
-        <option value="$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py" />
-        <option value="$PROJECT_DIR$/crawl_follow_shop.py" />
         <option value="$PROJECT_DIR$/exce1.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/sql.py" />
         <option value="$PROJECT_DIR$/main1491358614.log" />
         <option value="$PROJECT_DIR$/main1491358037.log" />
         <option value="$PROJECT_DIR$/main1491357754.log" />
         <option value="$PROJECT_DIR$/main_process.log" />
-        <option value="$PROJECT_DIR$/crawl_qbt_to_sql_main.py" />
         <option value="$PROJECT_DIR$/main1491458204.log" />
+        <option value="$PROJECT_DIR$/main1491461438.log" />
+        <option value="$PROJECT_DIR$/main1491464282.log" />
+        <option value="$PROJECT_DIR$/hot_item1491534946.log" />
+        <option value="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" />
+        <option value="$PROJECT_DIR$/crawl_qbt_to_sql_main.py" />
+        <option value="$PROJECT_DIR$/hot_shop1491535718.log" />
+        <option value="$PROJECT_DIR$/sql.py" />
+        <option value="$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py" />
+        <option value="$PROJECT_DIR$/crawl_follow_item.py" />
+        <option value="$PROJECT_DIR$/follow_item_process.log" />
+        <option value="$PROJECT_DIR$/follow_item1491536570.log" />
+        <option value="$PROJECT_DIR$/crawl_follow_shop.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="188" />
-    <option name="width" value="1252" />
+    <option name="x" value="264" />
+    <option name="width" value="1176" />
     <option name="height" value="860" />
   </component>
   <component name="ProjectView">
@@ -171,7 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,30 +176,14 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="C:/Python27/python.exe" />
   </component>
-  <component name="RunManager" selected="Python.crawl_qbt_to_sql_main">
-    <configuration default="false" name="crawl_follow_shop" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="qbt_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_follow_shop.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.crawl_follow_shop">
     <configuration default="false" name="crawl_qbt_to_sql_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -228,7 +201,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="exce1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="crawl_qingbao_to_sql_item" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -240,12 +213,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="qbt_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exce1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="crawl_qingbao_to_sql_shop" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -257,12 +230,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="qbt_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="sql" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="crawl_follow_item" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -274,7 +247,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="qbt_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sql.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_follow_item.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="crawl_follow_shop" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="qbt_v2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_follow_shop.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -414,19 +404,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.crawl_follow_shop" />
-      <item index="1" class="java.lang.String" itemvalue="Python.crawl_qbt_to_sql_main" />
-      <item index="2" class="java.lang.String" itemvalue="Python.exce1" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.sql" />
+      <item index="0" class="java.lang.String" itemvalue="Python.crawl_qbt_to_sql_main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_item" />
+      <item index="2" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_shop" />
+      <item index="3" class="java.lang.String" itemvalue="Python.crawl_follow_item" />
+      <item index="4" class="java.lang.String" itemvalue="Python.crawl_follow_shop" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.crawl_qbt_to_sql_main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.sql" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.exce1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.crawl_follow_shop" />
+        <item index="0" class="java.lang.String" itemvalue="Python.crawl_follow_shop" />
+        <item index="1" class="java.lang.String" itemvalue="Python.crawl_follow_item" />
+        <item index="2" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_shop" />
+        <item index="3" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_item" />
+        <item index="4" class="java.lang.String" itemvalue="Python.crawl_qbt_to_sql_main" />
       </list>
     </recent_temporary>
   </component>
@@ -444,15 +434,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="188" y="0" width="1252" height="860" extended-state="0" />
-    <editor active="false" />
+    <frame x="264" y="0" width="1176" height="860" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.218107" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23002633" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22465754" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22465754" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33561644" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -489,33 +479,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/sql.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#719#1104#0" expanded="false" />
-            <element signature="e#1140#2801#0" expanded="false" />
-            <element signature="e#3779#5078#0" expanded="false" />
-            <element signature="e#5121#7197#0" expanded="false" />
-            <element signature="e#7237#7786#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -529,10 +497,9 @@
             <element signature="e#4062#4363#0" expanded="false" />
             <element signature="e#4612#4742#0" expanded="false" />
             <element signature="e#4776#5158#0" expanded="false" />
-            <element signature="e#5208#5524#0" expanded="false" />
-            <element signature="e#5575#5785#0" expanded="false" />
-            <element signature="e#5831#5912#0" expanded="false" />
-            <element signature="e#5946#7274#0" expanded="false" />
+            <element signature="e#5576#5786#0" expanded="false" />
+            <element signature="e#5832#5913#0" expanded="false" />
+            <element signature="e#5947#7275#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -559,11 +526,13 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#719#1104#0" expanded="false" />
-            <element signature="e#1140#2801#0" expanded="false" />
-            <element signature="e#3779#5078#0" expanded="false" />
-            <element signature="e#5121#7197#0" expanded="false" />
-            <element signature="e#7237#7786#0" expanded="false" />
+            <element signature="e#374#669#0" expanded="false" />
+            <element signature="e#715#1100#0" expanded="false" />
+            <element signature="e#1136#2797#0" expanded="false" />
+            <element signature="e#2828#3741#0" expanded="false" />
+            <element signature="e#3775#5074#0" expanded="false" />
+            <element signature="e#5117#7193#0" expanded="false" />
+            <element signature="e#7233#7782#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -581,10 +550,9 @@
             <element signature="e#4062#4363#0" expanded="false" />
             <element signature="e#4612#4742#0" expanded="false" />
             <element signature="e#4776#5158#0" expanded="false" />
-            <element signature="e#5208#5524#0" expanded="false" />
-            <element signature="e#5575#5785#0" expanded="false" />
-            <element signature="e#5831#5912#0" expanded="false" />
-            <element signature="e#5946#7274#0" expanded="false" />
+            <element signature="e#5576#5786#0" expanded="false" />
+            <element signature="e#5832#5913#0" expanded="false" />
+            <element signature="e#5947#7275#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -611,11 +579,13 @@
           <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#719#1104#0" expanded="false" />
-            <element signature="e#1140#2801#0" expanded="false" />
-            <element signature="e#3779#5078#0" expanded="false" />
-            <element signature="e#5121#7197#0" expanded="false" />
-            <element signature="e#7237#7786#0" expanded="false" />
+            <element signature="e#374#669#0" expanded="false" />
+            <element signature="e#715#1100#0" expanded="false" />
+            <element signature="e#1136#2797#0" expanded="false" />
+            <element signature="e#2828#3741#0" expanded="false" />
+            <element signature="e#3775#5074#0" expanded="false" />
+            <element signature="e#5117#7193#0" expanded="false" />
+            <element signature="e#7233#7782#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -633,10 +603,9 @@
             <element signature="e#4062#4363#0" expanded="false" />
             <element signature="e#4612#4742#0" expanded="false" />
             <element signature="e#4776#5158#0" expanded="false" />
-            <element signature="e#5208#5524#0" expanded="false" />
-            <element signature="e#5575#5785#0" expanded="false" />
-            <element signature="e#5831#5912#0" expanded="false" />
-            <element signature="e#5946#7274#0" expanded="false" />
+            <element signature="e#5576#5786#0" expanded="false" />
+            <element signature="e#5832#5913#0" expanded="false" />
+            <element signature="e#5947#7275#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -664,11 +633,13 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#719#1104#0" expanded="false" />
-            <element signature="e#1140#2801#0" expanded="false" />
-            <element signature="e#3779#5078#0" expanded="false" />
-            <element signature="e#5121#7197#0" expanded="false" />
-            <element signature="e#7237#7786#0" expanded="false" />
+            <element signature="e#374#669#0" expanded="false" />
+            <element signature="e#715#1100#0" expanded="false" />
+            <element signature="e#1136#2797#0" expanded="false" />
+            <element signature="e#2828#3741#0" expanded="false" />
+            <element signature="e#3775#5074#0" expanded="false" />
+            <element signature="e#5117#7193#0" expanded="false" />
+            <element signature="e#7233#7782#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -686,10 +657,9 @@
             <element signature="e#4062#4363#0" expanded="false" />
             <element signature="e#4612#4742#0" expanded="false" />
             <element signature="e#4776#5158#0" expanded="false" />
-            <element signature="e#5208#5524#0" expanded="false" />
-            <element signature="e#5575#5785#0" expanded="false" />
-            <element signature="e#5831#5912#0" expanded="false" />
-            <element signature="e#5946#7274#0" expanded="false" />
+            <element signature="e#5576#5786#0" expanded="false" />
+            <element signature="e#5832#5913#0" expanded="false" />
+            <element signature="e#5947#7275#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -730,11 +700,13 @@
           <caret line="255" column="19" lean-forward="false" selection-start-line="255" selection-start-column="19" selection-end-line="255" selection-end-column="19" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#719#1104#0" expanded="false" />
-            <element signature="e#1140#2801#0" expanded="false" />
-            <element signature="e#3779#5078#0" expanded="false" />
-            <element signature="e#5121#7197#0" expanded="false" />
-            <element signature="e#7237#7786#0" expanded="false" />
+            <element signature="e#374#669#0" expanded="false" />
+            <element signature="e#715#1100#0" expanded="false" />
+            <element signature="e#1136#2797#0" expanded="false" />
+            <element signature="e#2828#3741#0" expanded="false" />
+            <element signature="e#3775#5074#0" expanded="false" />
+            <element signature="e#5117#7193#0" expanded="false" />
+            <element signature="e#7233#7782#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -761,42 +733,23 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#719#1104#0" expanded="false" />
-            <element signature="e#1140#2801#0" expanded="false" />
-            <element signature="e#3779#5078#0" expanded="false" />
-            <element signature="e#5121#7197#0" expanded="false" />
-            <element signature="e#7237#7786#0" expanded="false" />
+            <element signature="e#374#669#0" expanded="false" />
+            <element signature="e#715#1100#0" expanded="false" />
+            <element signature="e#1136#2797#0" expanded="false" />
+            <element signature="e#2828#3741#0" expanded="false" />
+            <element signature="e#3775#5074#0" expanded="false" />
+            <element signature="e#5117#7193#0" expanded="false" />
+            <element signature="e#7233#7782#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/follow_item1490940697.log" />
     <entry file="file://$PROJECT_DIR$/follow_item1490940827.log" />
-    <entry file="file://$PROJECT_DIR$/follow_item_process.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="127" lean-forward="false" selection-start-line="0" selection-start-column="127" selection-end-line="0" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/follow_shop_process.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl_qingbao_to_sql_item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="205" column="42" lean-forward="true" selection-start-line="205" selection-start-column="42" selection-end-line="205" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="202" column="20" lean-forward="true" selection-start-line="202" selection-start-column="20" selection-end-line="202" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -811,20 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="59" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="188" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl_follow_item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="122" column="17" lean-forward="true" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl_follow_shop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="164" column="24" lean-forward="false" selection-start-line="164" selection-start-column="24" selection-end-line="164" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -872,10 +811,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql.py">
+    <entry file="file://$PROJECT_DIR$/main1491460396.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main1491458204.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="348" column="0" lean-forward="false" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main1491461438.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main1491464282.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main1491468602.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11070">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot_item1491534946.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="19" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="285" column="0" lean-forward="false" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#374#669#0" expanded="false" />
+            <element signature="e#715#1100#0" expanded="false" />
+            <element signature="e#1136#2797#0" expanded="false" />
+            <element signature="e#2828#3741#0" expanded="false" />
+            <element signature="e#3775#5074#0" expanded="false" />
+            <element signature="e#5117#7193#0" expanded="false" />
+            <element signature="e#7233#7782#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl_qingbao_to_sql_item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2337">
+          <caret line="192" column="19" lean-forward="true" selection-start-line="192" selection-start-column="19" selection-end-line="192" selection-end-column="19" />
+          <folding>
+            <element signature="e#3890#5608#0" expanded="false" />
+            <element signature="e#5641#6464#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot_shop1491535718.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/follow_item_process.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/follow_item1491536570.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="203" column="60" lean-forward="true" selection-start-line="203" selection-start-column="4" selection-end-line="203" selection-end-column="60" />
+          <folding>
+            <element signature="e#3417#5135#0" expanded="false" />
+            <element signature="e#5168#5990#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl_follow_item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="260" column="12" lean-forward="true" selection-start-line="260" selection-start-column="12" selection-end-line="260" selection-end-column="12" />
+          <folding>
+            <element signature="e#3258#5390#0" expanded="false" />
+            <element signature="e#5423#6211#0" expanded="false" />
+            <element signature="e#7265#7735#0" expanded="false" />
+            <element signature="e#7762#8379#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl_follow_shop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="e#2946#4790#0" expanded="false" />
+            <element signature="e#4822#6032#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="184" column="9" lean-forward="false" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
             <element signature="e#1116#3139#0" expanded="false" />
@@ -885,10 +956,9 @@
             <element signature="e#4062#4363#0" expanded="false" />
             <element signature="e#4612#4742#0" expanded="false" />
             <element signature="e#4776#5158#0" expanded="false" />
-            <element signature="e#5208#5524#0" expanded="false" />
-            <element signature="e#5575#5785#0" expanded="false" />
-            <element signature="e#5831#5912#0" expanded="false" />
-            <element signature="e#5946#7274#0" expanded="false" />
+            <element signature="e#5576#5786#0" expanded="false" />
+            <element signature="e#5832#5913#0" expanded="false" />
+            <element signature="e#5947#7275#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -901,26 +971,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main1491458204.log">
+    <entry file="file://$PROJECT_DIR$/follow_shop1491537096.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+        <state relative-caret-position="152">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="262" column="39" lean-forward="true" selection-start-line="262" selection-start-column="39" selection-end-line="262" selection-end-column="39" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#719#1104#0" expanded="false" />
-            <element signature="e#1140#2801#0" expanded="false" />
-            <element signature="e#3779#5078#0" expanded="false" />
-            <element signature="e#5121#7197#0" expanded="false" />
-            <element signature="e#7237#7786#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
