@@ -18,14 +18,14 @@ tmp_insert_data = []
 
 def init():
     #os.environ['webdriver.gecko.driver'] = r"D:\geckodriver.exe"
-    profile_dir = r'C:\Users\Administrator\AppData\Roaming\Mozilla\Firefox\Profiles\70usgfgt.selenium'
+    profile_dir = r'C:\Users\Administrator\AppData\Roaming\Mozilla\Firefox\Profiles\l8rzesb2.selenium'
     driver = webdriver.Firefox(profile_dir, executable_path=r'D:\geckodriver\geckodriver.exe')
     time.sleep(2)
     return driver
 
 
 def login(driver, username, password):
-    driver.get("http://www.qbtchina.com/site/login")
+    driver.get("http://qbt.ecdataway.com/site/login")
     time.sleep(2)
     user = driver.find_element_by_id('LoginForm_username')
     user.clear()

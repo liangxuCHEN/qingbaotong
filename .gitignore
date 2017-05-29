@@ -1,0 +1,14 @@
+settings.py
+
+*.pyc
+
+*.log
+
+.idea/
+*.txt
+*.png
+res_doc/
+tests/
+*.rar
+
+*.log
