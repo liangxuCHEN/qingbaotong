@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff8d94e6-7e6e-4bcd-a9df-07d79f229185" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyquery_ex.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qbt_hot_shop_v2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qbt_web_tool.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl_qbt_to_sql_main.py" afterPath="$PROJECT_DIR$/crawl_qbt_to_sql_main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" afterPath="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot_item_process.log" afterPath="$PROJECT_DIR$/hot_item_process.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot_shop_process.log" afterPath="$PROJECT_DIR$/hot_shop_process.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,75 +21,104 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="qbt_hot_shop_v2.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/qbt_hot_shop_v2.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="95">
+                    <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="8" selection-end-column="10" />
+                    <folding>
+                      <element signature="e#542#2411#0" expanded="false" />
+                      <element signature="e#2489#3916#0" expanded="false" />
+                      <element signature="e#3980#5308#0" expanded="false" />
+                      <element signature="e#5341#6196#0" expanded="false" />
+                      <element signature="e#6240#6600#0" expanded="false" />
+                      <element signature="e#6640#7328#0" expanded="false" />
+                      <element signature="e#7368#7917#0" expanded="false" />
+                      <element signature="e#7944#8537#0" expanded="false" />
+                      <element signature="e#8571#8960#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sql.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql.py">
+      <file leaf-file-name="crawl_qingbao_to_sql_shop.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crawl_qingbao_to_sql_item.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawl_qingbao_to_sql_item.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+            <state relative-caret-position="536">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding>
-                <element signature="e#3890#5608#0" expanded="false" />
+                <element signature="e#24#54#0" expanded="true" />
+                <element signature="e#5168#5990#0" expanded="false" />
+                <element signature="e#6034#6394#0" expanded="false" />
+                <element signature="e#6434#7122#0" expanded="false" />
+                <element signature="e#7149#7742#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hot_shop1496223368.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hot_shop1496223368.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-342">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pyquery_ex.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyquery_ex.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-647">
+              <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+              <folding>
+                <element signature="e#24#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qbt_web_tool.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/qbt_web_tool.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2751">
-              <caret line="179" column="8" lean-forward="false" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="8" />
-              <folding>
-                <element signature="e#40#3380#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crawl_qbt_to_sql_main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="271" column="53" lean-forward="true" selection-start-line="271" selection-start-column="53" selection-end-line="271" selection-end-column="53" />
-              <folding>
-                <element signature="e#24#38#0" expanded="true" />
-                <element signature="e#1137#2798#0" expanded="false" />
-                <element signature="e#2829#3742#0" expanded="false" />
-                <element signature="e#3776#5075#0" expanded="false" />
-                <element signature="e#5118#7194#0" expanded="false" />
-                <element signature="e#7234#7783#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hot_item_process.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hot_item_process.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hot_item1496035784.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hot_item1496035784.log">
+      <file leaf-file-name="hot_shop_process.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hot_shop_process.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="139" column="79" lean-forward="true" selection-start-line="139" selection-start-column="79" selection-end-line="139" selection-end-column="136" />
+            <state relative-caret-position="19">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -103,12 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>current_url</find>
-      <find>index_shop</find>
-      <find>get_all_urls</find>
-      <find>get_urls_value</find>
-      <find>get_group_value</find>
-      <find>analyse_item_to_sql</find>
       <find>get_items_value</find>
       <find>get_items_urls_value</find>
       <find>get_shop_value</find>
@@ -124,14 +150,21 @@
       <find>engine</find>
       <find>exec_db_merge_function</find>
       <find>restart_program</find>
-      <find>output_data_to_db</find>
       <find>paramets</find>
       <find>table_schema</find>
-      <find>tmp_insert_data</find>
       <find>add_item_struct</find>
       <find>DB_TMP_TABLE</find>
       <find>HOST</find>
       <find>item_dat</find>
+      <find>__get_connect</find>
+      <find>output_data_to_db</find>
+      <find>UM_distinctid=15c52a5798ec5-00160e9c636d288-44504130-13c680-15c52a5798f276; CNZZDATA1258713365=79147817-1496034613-http%253A%252F%252Fwww.ecdataway.com%252F%7C1496197923; Hm_lvt_d614fba9d6d7554f5977bd1d74235343=1496138486,1496193793; PHPSESSID=cqriqducs4oqmnh3qhh1n5g696; Hm_lpvt_d614fba9d6d7554f5977bd1d74235343=1496199114</find>
+      <find>login</find>
+      <find>category_urls</find>
+      <find>type_data</find>
+      <find>category_id</find>
+      <find>exit</find>
+      <find>tmp_insert_data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,7 +184,6 @@
         <option value="$PROJECT_DIR$/main1491461438.log" />
         <option value="$PROJECT_DIR$/main1491464282.log" />
         <option value="$PROJECT_DIR$/hot_item1491534946.log" />
-        <option value="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" />
         <option value="$PROJECT_DIR$/hot_shop1491535718.log" />
         <option value="$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py" />
         <option value="$PROJECT_DIR$/crawl_follow_item.py" />
@@ -159,16 +191,22 @@
         <option value="$PROJECT_DIR$/follow_item1491536570.log" />
         <option value="$PROJECT_DIR$/crawl_follow_shop.py" />
         <option value="$PROJECT_DIR$/sql.py" />
-        <option value="$PROJECT_DIR$/hot_item_process.log" />
-        <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/crawl_qbt_to_sql_main.py" />
         <option value="$PROJECT_DIR$/hot_item1496035784.log" />
+        <option value="$PROJECT_DIR$/hot_item1496042350.log" />
+        <option value="$PROJECT_DIR$/hot_item1496047448.log" />
+        <option value="$PROJECT_DIR$/hot_item_process.log" />
+        <option value="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" />
+        <option value="$PROJECT_DIR$/hot_shop_process.log" />
+        <option value="$PROJECT_DIR$/pyquery_ex.py" />
+        <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/qbt_web_tool.py" />
+        <option value="$PROJECT_DIR$/qbt_hot_shop_v2.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="120" />
-    <option name="width" value="1320" />
+    <option name="width" value="1225" />
     <option name="height" value="860" />
   </component>
   <component name="ProjectView">
@@ -186,6 +224,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,32 +240,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.crawl_qingbao_to_sql_item">
-    <configuration default="false" name="crawl_qbt_to_sql_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="qbt_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_qbt_to_sql_main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.qbt_hot_shop_v2">
     <configuration default="false" name="crawl_qingbao_to_sql_item" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -239,23 +260,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="qbt_v2" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_qingbao_to_sql_item.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="crawl_qingbao_to_sql_shop" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="qbt_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -290,6 +294,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="qbt_v2" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_follow_shop.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="pyquery_ex" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="qbt_v2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyquery_ex.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="qbt_hot_shop_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="qbt_v2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qbt_hot_shop_v2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -429,19 +467,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.crawl_qbt_to_sql_main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_item" />
-      <item index="2" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_shop" />
-      <item index="3" class="java.lang.String" itemvalue="Python.crawl_follow_item" />
-      <item index="4" class="java.lang.String" itemvalue="Python.crawl_follow_shop" />
+      <item index="0" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_item" />
+      <item index="1" class="java.lang.String" itemvalue="Python.crawl_follow_item" />
+      <item index="2" class="java.lang.String" itemvalue="Python.crawl_follow_shop" />
+      <item index="3" class="java.lang.String" itemvalue="Python.pyquery_ex" />
+      <item index="4" class="java.lang.String" itemvalue="Python.qbt_hot_shop_v2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_item" />
-        <item index="1" class="java.lang.String" itemvalue="Python.crawl_follow_shop" />
-        <item index="2" class="java.lang.String" itemvalue="Python.crawl_follow_item" />
-        <item index="3" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_shop" />
-        <item index="4" class="java.lang.String" itemvalue="Python.crawl_qbt_to_sql_main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.qbt_hot_shop_v2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pyquery_ex" />
+        <item index="2" class="java.lang.String" itemvalue="Python.crawl_qingbao_to_sql_item" />
+        <item index="3" class="java.lang.String" itemvalue="Python.crawl_follow_shop" />
+        <item index="4" class="java.lang.String" itemvalue="Python.crawl_follow_item" />
       </list>
     </recent_temporary>
   </component>
@@ -459,15 +497,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="120" y="0" width="1320" height="860" extended-state="1" />
+    <frame x="0" y="0" width="1225" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20420888" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4023569" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22465754" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33561644" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5958904" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37123287" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -504,68 +542,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3192">
-          <caret line="168" column="2" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="false" />
             <element signature="e#1137#2798#0" expanded="false" />
             <element signature="e#2829#3742#0" expanded="false" />
             <element signature="e#3776#5075#0" expanded="false" />
             <element signature="e#5118#7194#0" expanded="false" />
-            <element signature="e#7234#7783#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_process.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="84" lean-forward="true" selection-start-line="1" selection-start-column="84" selection-end-line="1" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3192">
-          <caret line="168" column="2" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1558">
-          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#1137#2798#0" expanded="false" />
-            <element signature="e#2829#3742#0" expanded="false" />
-            <element signature="e#3776#5075#0" expanded="false" />
-            <element signature="e#5118#7194#0" expanded="false" />
-            <element signature="e#7234#7783#0" expanded="false" />
+            <element signature="e#7827#8140#0" expanded="false" />
+            <element signature="e#8188#8947#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -574,46 +567,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="912">
           <caret line="118" column="45" lean-forward="false" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_process.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="102" lean-forward="false" selection-start-line="27" selection-start-column="102" selection-end-line="27" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main1491224439.log" />
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#1137#2798#0" expanded="false" />
-            <element signature="e#2829#3742#0" expanded="false" />
-            <element signature="e#3776#5075#0" expanded="false" />
-            <element signature="e#5118#7194#0" expanded="false" />
-            <element signature="e#7234#7783#0" expanded="false" />
+            <element signature="e#24#38#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="118" column="45" lean-forward="false" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -645,12 +601,13 @@
         <state relative-caret-position="1235">
           <caret line="255" column="19" lean-forward="false" selection-start-line="255" selection-start-column="19" selection-end-line="255" selection-end-column="19" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="false" />
             <element signature="e#1137#2798#0" expanded="false" />
             <element signature="e#2829#3742#0" expanded="false" />
             <element signature="e#3776#5075#0" expanded="false" />
             <element signature="e#5118#7194#0" expanded="false" />
-            <element signature="e#7234#7783#0" expanded="false" />
+            <element signature="e#7827#8140#0" expanded="false" />
+            <element signature="e#8188#8947#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -675,12 +632,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="false" />
             <element signature="e#1137#2798#0" expanded="false" />
             <element signature="e#2829#3742#0" expanded="false" />
             <element signature="e#3776#5075#0" expanded="false" />
             <element signature="e#5118#7194#0" expanded="false" />
-            <element signature="e#7234#7783#0" expanded="false" />
+            <element signature="e#7827#8140#0" expanded="false" />
+            <element signature="e#8188#8947#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -695,13 +653,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exce1.py" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="59" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="188" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main1491224439.log" />
     <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/engine/reflection.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -729,27 +680,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/follow_item1491536570.log" />
-    <entry file="file://$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="203" column="60" lean-forward="true" selection-start-line="203" selection-start-column="4" selection-end-line="203" selection-end-column="60" />
-          <folding>
-            <element signature="e#3417#5135#0" expanded="false" />
-            <element signature="e#5168#5990#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl_follow_item.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="260" column="12" lean-forward="true" selection-start-line="260" selection-start-column="12" selection-end-line="260" selection-end-column="12" />
-          <folding>
-            <element signature="e#3258#5390#0" expanded="false" />
-            <element signature="e#5423#6211#0" expanded="false" />
-            <element signature="e#7265#7735#0" expanded="false" />
-            <element signature="e#7762#8379#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -757,18 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding>
-            <element signature="e#2946#4790#0" expanded="false" />
-            <element signature="e#4822#6032#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,49 +706,170 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="139" column="79" lean-forward="true" selection-start-line="139" selection-start-column="79" selection-end-line="139" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot_item1496040002.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1765">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot_item1496042350.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3589">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot_item1496047448.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/pyquery/ajax.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot_shop1496216746.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-664">
+          <caret line="211" column="44" lean-forward="true" selection-start-line="211" selection-start-column="44" selection-end-line="211" selection-end-column="44" />
+          <folding>
+            <element signature="e#24#38#0" expanded="false" />
+            <element signature="e#1137#2798#0" expanded="false" />
+            <element signature="e#2829#3742#0" expanded="false" />
+            <element signature="e#3776#5075#0" expanded="false" />
+            <element signature="e#5118#7194#0" expanded="false" />
+            <element signature="e#7827#8140#0" expanded="false" />
+            <element signature="e#8188#8947#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hot_item_process.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawl_qingbao_to_sql_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+        <state relative-caret-position="-190">
+          <caret line="134" column="4" lean-forward="false" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
           <folding>
-            <element signature="e#3890#5608#0" expanded="false" />
+            <element signature="e#3892#5610#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawl_qbt_to_sql_main.py">
+    <entry file="file://$PROJECT_DIR$/pyquery_ex.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="271" column="53" lean-forward="true" selection-start-line="271" selection-start-column="53" selection-end-line="271" selection-end-column="53" />
+        <state relative-caret-position="-647">
+          <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
-            <element signature="e#1137#2798#0" expanded="false" />
-            <element signature="e#2829#3742#0" expanded="false" />
-            <element signature="e#3776#5075#0" expanded="false" />
-            <element signature="e#5118#7194#0" expanded="false" />
-            <element signature="e#7234#7783#0" expanded="false" />
+            <element signature="e#24#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2751">
-          <caret line="179" column="8" lean-forward="false" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="8" />
+        <state relative-caret-position="285">
+          <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl_qingbao_to_sql_shop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
-            <element signature="e#40#3380#0" expanded="false" />
+            <element signature="e#24#54#0" expanded="true" />
+            <element signature="e#5168#5990#0" expanded="false" />
+            <element signature="e#6034#6394#0" expanded="false" />
+            <element signature="e#6434#7122#0" expanded="false" />
+            <element signature="e#7149#7742#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot_shop1496223368.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot_shop_process.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qbt_hot_shop_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="e#542#2411#0" expanded="false" />
+            <element signature="e#2489#3916#0" expanded="false" />
+            <element signature="e#3980#5308#0" expanded="false" />
+            <element signature="e#5341#6196#0" expanded="false" />
+            <element signature="e#6240#6600#0" expanded="false" />
+            <element signature="e#6640#7328#0" expanded="false" />
+            <element signature="e#7368#7917#0" expanded="false" />
+            <element signature="e#7944#8537#0" expanded="false" />
+            <element signature="e#8571#8960#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qbt_web_tool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>

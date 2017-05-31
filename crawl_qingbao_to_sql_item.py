@@ -74,7 +74,7 @@ def get_top_sale_table_value(categoryid, record_type, date_chose=None):
                     'SalesCnt': int(tmp_item[6].replace(',', '')),
                     'SalesMoney': int(tmp_item[7].replace(',', '')),
                     'Manager': tmp_item[9].replace('\'', ''),
-                    'MangerURL': tmp_item[8],
+                    'ManagerURL': tmp_item[8],
                     'city': tmp_item[10],
                     'RecordDate': date_select + '01',
                     'RecordType': record_type,
@@ -84,7 +84,7 @@ def get_top_sale_table_value(categoryid, record_type, date_chose=None):
                 count = 0
 
         # output to DB
-        #sql.hot_sale_item_to_sql(tmp_data, DB_TMP_TABLE)
+        # sql.hot_sale_item_to_sql(tmp_data, DB_TMP_TABLE)
         output_data_to_db()
 
         paramets['date_index'] += 1
